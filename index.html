@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generador de Contraseñas</title>
+        <!-- Agregar Tailwind CSS desde CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+      </head>      
+      <body class="bg-gray-100 font-sans">
+
+        <!-- Contenedor principal centrado -->
+        <div class="flex justify-center items-center min-h-screen">
+          <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Secure Password Generator</h1>
+      
+            <!-- Generación de Contraseña -->
+            <button id="generate-password" class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+              Generate Password
+            </button>
+      
+            <!-- Mostrar Contraseña -->
+            <div class="mt-6">
+              <input id="password" type="text" readonly class="w-full p-2 border border-gray-300 rounded-md" placeholder="Tu contraseña aparecerá aquí">
+            </div>
+      
+            <!-- Copiar al portapapeles -->
+            <button id="copy-password" class="w-full mt-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none">
+              Copy to Clipboard
+            </button>
+          </div>
+        </div>
+      
+        <!-- Agregar script de JavaScript -->
+        <script src="script.js"></script>
+      </body>
+</html>
