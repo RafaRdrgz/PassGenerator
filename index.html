@@ -30,51 +30,52 @@
 
         <main class="main flex-1 flex items-center justify-center">
 
-          <div class="bg-white py-6 px-10 rounded-xl shadow-lg flex flex-col">
+          <div class="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg py-4 px-2 md:px-8 lg:px-16 rounded-xl shadow-lg flex flex-col my-2 md:my-4 lg:my-6">
 
-            <p class="ubuntu-bold text-lg text-center mb-6">Generate your password</p>
+            <p class="ubuntu-bold text-lg text-center m-0 md:m-2">Generate your password</p>
               
-              <div class="bg-white p-6 rounded-xl border-2 shadow-lg mb-4">
+              <div class="bg-white py-2 px-2 md:py-4 md:px-4 lg:py-8 lg:px-8 rounded-xl border-2 shadow-lg my-2 md:my-4">
 
                 <h3 class="text-base mb-4 text-center">Choose password size</h3>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-wrap md:flex-nowrap justify-between space-x-2 md:space-x-4">
+
                   <!-- Opción de 8 caracteres -->
-                  <div class="flex items-center">
+                  <div class="flex items-center mb-2 md:mb-0">
                     <input type="radio" id="size-8" name="password-size" value="8" class="mr-2">
-                    <label for="size-8" class="text-xs font-medium">8 characters</label>
+                    <label for="size-8" class="text-xs font-medium">8 chars</label>
                   </div>
               
                   <!-- Opción de 12 caracteres -->
-                  <div class="flex items-center">
+                  <div class="flex items-center mb-2 md:mb-0">
                     <input type="radio" id="size-12" name="password-size" value="12" class="mr-2">
-                    <label for="size-12" class="text-xs font-medium">12 characters</label>
+                    <label for="size-12" class="text-xs font-medium">12 chars</label>
                   </div>
               
                   <!-- Opción de 16 caracteres -->
-                  <div class="flex items-center">
+                  <div class="flex items-center mb-2 md:mb-0">
                     <input type="radio" id="size-16" name="password-size" value="16" class="mr-2">
-                    <label for="size-16" class="text-xs font-medium">16 characters</label>
+                    <label for="size-16" class="text-xs font-medium">16 chars</label>
                   </div>
               
                   <!-- Opción de 32 caracteres -->
-                  <div class="flex items-center">
+                  <div class="flex items-center mb-2 md:mb-0">
                     <input type="radio" id="size-32" name="password-size" value="32" class="mr-2">
-                    <label for="size-32" class="text-xs font-medium">32 characters</label>
+                    <label for="size-32" class="text-xs font-medium">32 chars</label>
                   </div>
                 </div>
               </div> <!-- end tamaño-->
 
               <!--Botón de generación de contraseña-->
-              <button id="generate-password" class="generate-button ubuntu-regular text-sm p-2 rounded-md mx-auto mb-4">
+              <button id="generate-password" class="generate-button ubuntu-regular text-sm p-2 rounded-md mx-auto mb-2 md:mb-4">
                 Generate Password
               </button>
 
               <!--Input para mostrar contraseña-->
-              <input id="generated-password" type="text" class="w-full text-center text-sm border-2 rounded-md py-2 px-4 mb-4" 
+              <input id="generated-password" type="text" class="w-full sm:w-auto text-center text-sm border-2 rounded-md py-2 px-4 mb-4" 
                      placeholder="Your password will appear here" readonly>
 
-              <button id="generate-password" class="copy-button ubuntu-regular p-4 rounded-md mx-auto">
+              <button id="generate-password" class="copy-button ubuntu-regular p-4 rounded-md mx-auto mb-0">
                 <i class="ph-bold ph-clipboard-text text-xl"></i> <p class="text-xs">To Clipboard</p>
               </button>
 
@@ -83,7 +84,7 @@
 
         </main>
 
-        <footer class="footer h-8 shadow-lg flex items-center justify-center">
+        <footer class="footer flex-2 py-1 shadow-lg flex items-center justify-center">
           <p class="ubuntu-light text-xs text-white">Made by R.</p>
         </footer>
 
