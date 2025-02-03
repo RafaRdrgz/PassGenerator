@@ -9,12 +9,13 @@
     --font: "Ubuntu", sans-serif;
 
     /* Paleta de colores */
+    --white: #ffffff;
     --aquamarine: #91F9E5;
     --aquamarine-dark: #76F7BF;
     --emerald: #5FDD9D;
     --sea-green: #499167;
     --black-olive: #3F4531;
-    --white: #ffffff;
+
 }
 
 .ubuntu-light {
@@ -39,6 +40,24 @@
     font-family: var(--font);
     font-weight: 700;
     font-style: normal;
-  }
+}
+
+.header, .footer{
+
+  background-color: var(--black-olive);
+}
   
+.main{
+  background-color: var(--emerald);
+}
+
+
+.generate-button, .copy-button{
+  background-color: var(--aquamarine);
+}
+
+.generate-button:hover, .copy-button:hover{
+  background-color: var(--aquamarine-dark);
+  cursor: pointer;
+}
 

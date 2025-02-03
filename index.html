@@ -3,25 +3,89 @@
     <head>
 
         <!-- Agregar Tailwind CSS desde CDN -->
+
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
         <!-- Agregar Phosphor Icons desde CDN -->
+
         <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-        <!--Agregar Estilos-->
+
+        <!--Agregar Estilos CSS-->
         <link rel="stylesheet" href="styles.css">
         
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Generador de Contraseñas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Secure Password Generator</title>
 
       </head>      
-      <body>
+      <body class="min-h-screen flex flex-col">
 
-        <header>
+        <header class="header h-16 shadow-lg flex items-center justify-center">
 
-          <h2 class=""></h2>
+          <h2 class="ubuntu-bold text-center text-white text-lg">
+            <a href="index.html" aria-label="Index page">Secure Password Generator</a>
+          </h2>
 
         </header>
 
+        <main class="main flex-1 flex items-center justify-center">
+
+          <div class="bg-white py-6 px-10 rounded-xl shadow-lg flex flex-col">
+
+            <p class="ubuntu-bold text-lg text-center mb-6">Generate your password</p>
+              
+              <div class="bg-white p-6 rounded-xl border-2 shadow-lg mb-4">
+
+                <h3 class="text-base mb-4 text-center">Choose password size</h3>
+
+                <div class="flex space-x-4">
+                  <!-- Opción de 8 caracteres -->
+                  <div class="flex items-center">
+                    <input type="radio" id="size-8" name="password-size" value="8" class="mr-2">
+                    <label for="size-8" class="text-xs font-medium">8 characters</label>
+                  </div>
+              
+                  <!-- Opción de 12 caracteres -->
+                  <div class="flex items-center">
+                    <input type="radio" id="size-12" name="password-size" value="12" class="mr-2">
+                    <label for="size-12" class="text-xs font-medium">12 characters</label>
+                  </div>
+              
+                  <!-- Opción de 16 caracteres -->
+                  <div class="flex items-center">
+                    <input type="radio" id="size-16" name="password-size" value="16" class="mr-2">
+                    <label for="size-16" class="text-xs font-medium">16 characters</label>
+                  </div>
+              
+                  <!-- Opción de 32 caracteres -->
+                  <div class="flex items-center">
+                    <input type="radio" id="size-32" name="password-size" value="32" class="mr-2">
+                    <label for="size-32" class="text-xs font-medium">32 characters</label>
+                  </div>
+                </div>
+              </div> <!-- end tamaño-->
+
+              <!--Botón de generación de contraseña-->
+              <button id="generate-password" class="generate-button ubuntu-regular text-sm p-2 rounded-md mx-auto mb-4">
+                Generate Password
+              </button>
+
+              <!--Input para mostrar contraseña-->
+              <input id="generated-password" type="text" class="w-full text-center text-sm border-2 rounded-md py-2 px-4 mb-4" 
+                     placeholder="Your password will appear here" readonly>
+
+              <button id="generate-password" class="copy-button ubuntu-regular p-4 rounded-md mx-auto">
+                <i class="ph-bold ph-clipboard-text text-xl"></i> <p class="text-xs">To Clipboard</p>
+              </button>
+
+            </div>
+          </div>
+
+        </main>
+
+        <footer class="footer h-8 shadow-lg flex items-center justify-center">
+          <p class="ubuntu-light text-xs text-white">Made by R.</p>
+        </footer>
 
 
         <!-- Agregar script de JavaScript -->
